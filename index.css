@@ -1,0 +1,134 @@
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.header {
+    background: linear-gradient(90deg, rgba(29, 161, 242, 0.8) 0%, rgba(255, 82, 82, 0.8) 100%);
+    color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    opacity: 1.0; 
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.header h1, .header p {
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 0 10px rgba(29, 161, 242, 1), 0 0 20px rgba(255, 82, 82, 1);
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.header p {
+    font-size: 1.5rem;
+}
+
+.skills-card {
+    background: #1f1f1f;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.skills-card h5 {
+    color: #64b5f6;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.skills-list i {
+    margin-right: 8px;
+}
+
+.icon-box {
+    padding: 10px;
+    background-color: #333;
+    border-radius: 8px;
+}
+
+.icon-box p {
+    margin: 0;
+}
+
+.icon-box a {
+    color: #64b5f6;
+}
+
+.icon-box a:hover {
+    color: #bb86fc;
+}
+
+.bg-light {
+    background-color: #1f1f1f !important;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-picture:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+    width: 200%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .project-image {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.skills-list i {
+    transition: color 0.3s ease;
+}
+
+.skills-list i:hover {
+    color: #bb86fc;
+}
